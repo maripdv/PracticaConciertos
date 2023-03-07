@@ -6,6 +6,7 @@ package com.PracticaConciertos.PracticaConcierto.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import java.sql.Date;
+import lombok.Data;
 
 
 @Entity
@@ -15,6 +16,7 @@ public class Concierto {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", updatable = false, nullable = false)
     private Long id;
+    
     @Column(name = "artista")
     private String artista;
     @Column(name = "costo")
@@ -35,12 +37,12 @@ public class Concierto {
         this.id = id;
     }
 
-    public String getNombre_artista() {
+    public String getArtista() {
         return artista;
     }
 
-    public void setNombre_artista(String nombre_artista) {
-        this.artista = nombre_artista;
+    public void setArtista(String artista) {
+        this.artista = artista;
     }
 
     public int getCosto() {
@@ -74,6 +76,4 @@ public class Concierto {
     public void setLugar(String lugar) {
         this.lugar = lugar;
     }
-    
-    
 }

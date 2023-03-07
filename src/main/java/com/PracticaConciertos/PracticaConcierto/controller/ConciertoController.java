@@ -32,7 +32,7 @@ public class ConciertoController {
     public String index(Model model) {
         List<Concierto> listaConcierto = ConciertoService.verConcierto();
         model.addAttribute("titulo", "Tabla Concierto");
-        model.addAttribute("concierto", listaConcierto);
+        model.addAttribute("conciertos", listaConcierto);
         return "listaConciertos";
     }
 
